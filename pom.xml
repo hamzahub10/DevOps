@@ -50,6 +50,33 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+         <dependencies>
+    <!-- JUnit 5 -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.9.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito pour simuler les dépendances -->
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>5.0.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito JUnit 5 (facilite l'intégration de Mockito avec JUnit 5) -->
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-junit-jupiter</artifactId>
+        <version>5.0.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
     </dependencies>
 
     <build>
@@ -66,6 +93,28 @@
                     </excludes>
                 </configuration>
             </plugin>
+
+            <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.8</version>
+            <executions>
+                <!-- Préparer le JaCoCo avant les tests -->
+                <execution>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <!-- Générer le rapport après les tests -->
+                <execution>
+                    <id>report</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
         </plugins>
     </build>
          <!-- Deploy to Nexus -->
