@@ -14,7 +14,7 @@
     <!-- Project Coordinates -->
     <groupId>tn.esprit</groupId>
     <artifactId>tp-foyer</artifactId>
-    <version>0.0.1</version>
+    <version>tpfoyer-5.0.0</version>
     <name>tp-foyer</name>
     <description>tp-foyer</description>
 
@@ -74,7 +74,7 @@
         </dependency>
 
         <!-- Mockito JUnit Jupiter for JUnit 5 support in tests -->
-      
+
 
     </dependencies>
 
