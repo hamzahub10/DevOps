@@ -23,7 +23,7 @@ class UniversiteServiceImplTest {
     private UniversiteRepository universiteRepository;
 
     @InjectMocks
-    private IUniversiteService universiteService;
+    private UniversiteServiceImplTest universiteService;
 
     @BeforeEach
     void setUp() {
