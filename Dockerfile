@@ -1,6 +1,6 @@
 
 # Utiliser l'image officielle de OpenJDK 17 comme base
-FROM openjdk:17-jdk-slim
+FROM openjdk:17-jdk-alpine
 
 # Exposer le port 8080, qui est le port par défaut pour Spring Boot
 EXPOSE 8089
