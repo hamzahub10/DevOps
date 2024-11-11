@@ -3,7 +3,7 @@
 FROM openjdk:17-jdk-slim
 
 # Exposer le port 8080, qui est le port par défaut pour Spring Boot
-EXPOSE 8080
+EXPOSE 8089
 
 # Copier le fichier JAR généré par Maven dans le conteneur
 # Assurez-vous que le JAR est généré avant cette étape, par exemple avec 'mvn clean install'
