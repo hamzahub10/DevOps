@@ -14,7 +14,7 @@
     <!-- Project Coordinates -->
     <groupId>tn.esprit</groupId>
     <artifactId>tp-foyer</artifactId>
-    <version>tpfoyer-5.0.0</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>tp-foyer</name>
     <description>tp-foyer</description>
 
@@ -96,6 +96,7 @@
                 </configuration>
             </plugin>
 
+
             <!-- Jacoco Maven Plugin for code coverage reports -->
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -125,7 +126,7 @@
         <repository>
             <id>deploymentRepo</id>
             <name>Nexus Repository</name>
-            <url>http://192.168.33.10:8081/repository/maven-releases/</url> <!-- Change to maven-releases -->
+            <url>http://192.168.33.10:8081/repository/maven-snapshots/</url> <!-- Change to maven-releases -->
         </repository>
     </distributionManagement>
 
