@@ -18,29 +18,21 @@ import java.util.List;
 public class UniversiteController {
     @GetMapping("/retrieveAllUniversities")
     public List<Universite> retrieveAllUniversities() {
-        return universiteService.retrieveAllUniversities();
+        return universiteService.retrieveAllUniversites();
     }
 @PostMapping("/addUniversity")
     public Universite addUniversity(@RequestBody Universite u) {
-        return universiteService.addUniversity(u);
+        return universiteService.addUniversite(u);
     }
 @PutMapping("/updateUniversity")
     public Universite updateUniversity(@RequestBody Universite u) {
-        return universiteService.updateUniversity(u);
+        return universiteService.modifyUniversite(u);
     }
 @GetMapping("/retrieveUniversity/{idUniversity}")
     public Universite retrieveUniversity(@PathVariable("idUniversity") long idUniversity) {
-        return universiteService.retrieveUniversity(idUniversity);
+        return universiteService.retrieveUniversite(idUniversity);
     }
-@PutMapping("/affecterFoyerAUniversite/{idFoyer}/{nomUniversite}")
-    public Universite affecterFoyerAUniversite(@PathVariable("idFoyer") long idFoyer, @PathVariable("nomUniversite") String nomUniversite) {
-        return universiteService.affecterFoyerAUniversite(idFoyer, nomUniversite);
-    }
-@PutMapping("/desaffecterFoyerAUniversite/{idUniversite}")
-    public Universite desaffecterFoyerAUniversite(
-                                                  @PathVariable("idUniversite") long idUniversite) {
-        return universiteService.desaffecterFoyerAUniversite( idUniversite);
-    }
+
 
     IUniversiteService universiteService;
 }
