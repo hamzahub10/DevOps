@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import tn.esprit.tpfoyer.entity.Universite;
-import tn.esprit.tpfoyer.repository.UniversiteRepository;
-import tn.esprit.tpfoyer.service.UniversiteServiceImpl;
+import tn.esprit.tpfoyer17.entities.Universite;
+import tn.esprit.tpfoyer17.repositories.UniversiteRepository;
+import tn.esprit.tpfoyer17.services.interfaces.IUniversiteService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ class UniversiteServiceImplTest {
     private UniversiteRepository universiteRepository;
 
     @InjectMocks
-    private UniversiteServiceImpl universiteService;
+    private IUniversiteService universiteService;
 
     @BeforeEach
     void setUp() {
@@ -35,7 +35,7 @@ class UniversiteServiceImplTest {
         List<Universite> mockUniversites = new ArrayList<>();
         when(universiteRepository.findAll()).thenReturn(mockUniversites);
 
-        List<Universite> result = universiteService.retrieveAllUniversites();
+        List<Universite> result = universiteService.retrieveAllUniversities();
 
         assertEquals(mockUniversites, result);
         verify(universiteRepository, times(1)).findAll();
@@ -47,7 +47,7 @@ class UniversiteServiceImplTest {
         Universite mockUniversite = new Universite();
         when(universiteRepository.findById(universiteId)).thenReturn(Optional.of(mockUniversite));
 
-        Universite result = universiteService.retrieveUniversite(universiteId);
+        Universite result = universiteService.retrieveUniversity(universiteId);
 
         assertEquals(mockUniversite, result);
         verify(universiteRepository, times(1)).findById(universiteId);
@@ -58,7 +58,7 @@ class UniversiteServiceImplTest {
         Universite universite = new Universite();
         when(universiteRepository.save(universite)).thenReturn(universite);
 
-        Universite result = universiteService.addUniversite(universite);
+        Universite result = universiteService.addUniversity(universite);
 
         assertEquals(universite, result);
         verify(universiteRepository, times(1)).save(universite);
@@ -69,7 +69,7 @@ class UniversiteServiceImplTest {
         Universite universite = new Universite();
         when(universiteRepository.save(universite)).thenReturn(universite);
 
-        Universite result = universiteService.modifyUniversite(universite);
+        Universite result = universiteService.updateUniversity(universite);
 
         assertEquals(universite, result);
         verify(universiteRepository, times(1)).save(universite);
@@ -79,7 +79,7 @@ class UniversiteServiceImplTest {
     void testRemoveUniversite() {
         Long universiteId = 1L;
 
-        universiteService.removeUniversite(universiteId);
+        universiteService.desaffecterFoyerAUniversite(universiteId);
 
         verify(universiteRepository, times(1)).deleteById(universiteId);
     }
