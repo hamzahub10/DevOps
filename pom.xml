@@ -85,6 +85,7 @@
 
     <!-- Build Configuration -->
     <build>
+        <finalName>tpFoyer-17-0.0.1</finalName> <!-- Set the final name of the JAR -->
         <plugins>
             <!-- Spring Boot Maven Plugin for building and running Spring Boot apps -->
             <plugin>
@@ -129,7 +130,7 @@
         <repository>
             <id>deploymentRepo</id>
             <name>Nexus Repository</name>
-            <url>http://192.168.33.10:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.33.10:8081/repository/maven-releases/</url> <!-- Change to maven-releases -->
         </repository>
     </distributionManagement>
 
