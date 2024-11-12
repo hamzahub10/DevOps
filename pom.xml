@@ -40,6 +40,11 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -67,11 +72,13 @@
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-         <repository>
-                  <id>deploymentRepo</id>
-                  <name>Nexus Repository</name>
-                  <url>http://192.168.1.6:8081/repository/maven-snapshots/</url>
-         </repository>
-    </distributionManagement>  
+         <!-- Deploy to Nexus -->
+<distributionManagement>
+<repository>
+<id>deploymentRepo</id>
+<name>Nexus Repository</name>
+<url>http://localhost:8081/repository/maven-releases/</url>
+</repository>
+</distributionManagement>
+
 </project>
