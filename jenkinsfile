@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Récupération du code') {
             steps {
-                git branch: 'hamza', url: 'https://github.com/hamzahub10/DevOps.git'
+                git branch: 'hamzaa', url: 'https://github.com/hamzahub10/DevOps.git'
             }
         }
 

@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e94b3880-79d2-4432-98e4-4f1c18b380fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/TpFoyer17Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/TpFoyer17Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/entities/Foyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/entities/Foyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/services/impementations/FoyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/services/impementations/FoyerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/services/interfaces/IFoyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/tpfoyer17/services/interfaces/IFoyerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tn/esprit/tpfoyer17/TpFoyer17ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tn/esprit/tpfoyer17/TpFoyer17ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +18,9 @@
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2olvdCmQZhG6YTYCfydtGEo7TAk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,7 +33,7 @@
     "Maven.tpFoyer-17 [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "hamzaa",
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
@@ -63,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731457063348</updated>
       <workItem from="1731457068252" duration="205000" />
+      <workItem from="1731460049232" duration="97000" />
     </task>
     <servers />
   </component>
