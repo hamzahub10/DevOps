@@ -38,5 +38,6 @@ public class Foyer implements Serializable {
     Set<Bloc> blocs;
 
 
-
+    public Foyer(Long o, String foyerC, int capaciteFoyer, Object universite, Object blocs) {
+    }
 }

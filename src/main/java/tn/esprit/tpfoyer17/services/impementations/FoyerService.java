@@ -1,5 +1,5 @@
 package tn.esprit.tpfoyer17.services.impementations;
-
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -30,10 +30,12 @@ public class FoyerService implements IFoyerService {
         return (List<Foyer>) foyerRepository.findAll();
     }
 
+    @Transactional
     @Override
     public Foyer addFoyer(Foyer f) {
         return foyerRepository.save(f);
     }
+
 
     @Override
     public Foyer updateFoyer(Foyer f) {
@@ -42,25 +44,30 @@ public class FoyerService implements IFoyerService {
 
     @Override
     public Foyer retrieveFoyer(long idFoyer) {
-        return foyerRepository.findById(idFoyer).orElse(null);
+        return foyerRepository.findById(idFoyer)
+                .orElseThrow(() -> new EntityNotFoundException("Foyer with ID " + idFoyer + " not found"));
     }
 
     @Override
     public void removeFoyer(long idFoyer) {
-    foyerRepository.deleteById(idFoyer);
+        if (!foyerRepository.existsById(idFoyer)) {
+            throw new EntityNotFoundException("Foyer with ID " + idFoyer + " not found");
+        }
+        foyerRepository.deleteById(idFoyer);
     }
 
     @Transactional
     public Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer, long idUniversite) {
-        Universite universite = universiteRepository.findById(idUniversite).orElse(null);
-foyerRepository.save(foyer);
-for(Bloc bloc : foyer.getBlocs())
-{
-    bloc.setFoyer(foyer);
-    blocRepository.save(bloc);
-}
+        Universite universite = universiteRepository.findById(idUniversite)
+                .orElseThrow(() -> new EntityNotFoundException("Universite with ID " + idUniversite + " not found"));
 
-        assert universite != null;
+        foyerRepository.save(foyer);
+
+        for (Bloc bloc : foyer.getBlocs()) {
+            bloc.setFoyer(foyer);
+            blocRepository.save(bloc);
+        }
+
         universite.setFoyer(foyer);
         universiteRepository.save(universite);
 
