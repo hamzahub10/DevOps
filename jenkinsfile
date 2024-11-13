@@ -41,7 +41,7 @@ pipeline {
                  sh 'mvn deploy -DskipTests'
              }
          }
-/*
+
          stage('Build image') {
                    steps {
                     sh 'docker build -t tpfoyerdevops .'
@@ -52,8 +52,8 @@ pipeline {
                    steps {
                  sh 'docker login -u hamzaesprit -p hamza1234.'
                  echo "next"
-                 sh 'docker tag tpfoyerdevops hamza/tpfoyerdevops:latest '
-                 sh 'docker push hamza/tpfoyerdevops:latest'
+                 sh 'docker tag tpfoyerdevops hamzaesprit/tpfoyerdevops:latest '
+                 sh 'docker push hamzaesprit/tpfoyerdevops:latest'
                       }
                }
    stage('Deploy with Docker Compose') {
@@ -73,7 +73,7 @@ pipeline {
             }
         }
 
-        stage('Vérification de Prometheus') {
+     /*   stage('Vérification de Prometheus') {
             steps {
                 script {
                     sleep(10)  // Attendre que Prometheus soit prêt
@@ -90,7 +90,7 @@ pipeline {
                 }
             }
         }
-    }
+    }*/
     post {
         success {
             slackSend channel: '#devops-notification', color: 'green', message: 'Build success', teamDomain: 'Devops', tokenCredentialId: 'slack-token'
