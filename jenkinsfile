@@ -60,7 +60,7 @@ pipeline {
             steps {
                 dir('firstpipeline') {
                     sh 'docker compose down'
-                    sh " docker compose up -d" //IMAGE_TAG=${IMAGE_TAG}
+                    sh 'docker compose up -d' //IMAGE_TAG=${IMAGE_TAG}
 
                 }
             }
