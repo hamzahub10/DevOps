@@ -14,7 +14,8 @@
 
 # Démarrer l'application Spring Boot avec le fichier JAR copié
 #ENTRYPOINT ["java", "-jar", "/tpFoyer-17.jar"]
+
 FROM openjdk:17-jdk-alpine
 EXPOSE 8089
-ADD target/tpfoyer-17-5.0.0.jar tpfoyer-17-5.0.0.jar
-ENTRYPOINT ["java","-jar","/tpfoyer-17-5.0.0.jar"]
+ADD target/tpFoyer-17-5.0.0.jar tpFoyer-17-5.0.0.jar
+ENTRYPOINT ["java", "-jar", "/tpFoyer-17-5.0.0.jar"]
