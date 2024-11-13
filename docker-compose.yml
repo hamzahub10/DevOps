@@ -1,7 +1,7 @@
 version: '3'
 services:
   tp-foyer:
-    image: norchenekthiri/tpfoyer-17
+    image: norchenekthiri/tpfoyer-17:0.0.1
     ports:
       - "8089:8089"
     networks:
